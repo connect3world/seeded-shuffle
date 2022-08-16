@@ -1,25 +1,33 @@
 {
-  "name": "seededshuffle",
-  "version": "0.2.0",
-  "homepage": "https://github.com/LouisT/SeededShuffle",
-  "author": {
-    "name": "Louis T.",
-    "email": "louist@ltdev.im",
-    "url": "http://ltdev.im/"
+  "name": "@connect3world/seededshuffle",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/connect3world"
   },
+  "version": "0.0.1",
+  "description": "Shuffle and unshuffle an array by seed/key.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "mocha test.js"
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "author": {
+    "name": "John Cido",
+    "email": "john.cido@connect3.world"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/LouisT/SeededShuffle.git"
+    "url": "git+https://github.com/connect3world/seeded-shuffle.git"
   },
-  "licenses": [
-    {
-      "type": "unlicense",
-      "url": "http://unlicense.org/"
-    }
-  ],
+  "bugs": {
+    "url": "https://github.com/connect3world/seeded-shuffle/issues"
+  },
+  "homepage": "https://github.com/connect3world/seeded-shuffle",
+  "license": "MIT",
   "keywords": [
     "shuffle",
     "seed",
@@ -28,11 +36,23 @@
     "array",
     "seeded"
   ],
-  "description": "Shuffle and unshuffle an array by seed/key.",
-  "engine": "node => 0.6",
-  "main": "index.js",
   "devDependencies": {
-    "chai": "^2.3.0",
-    "mocha": "^2.2.5"
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/jest": "^28.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "jest": "^28.1.3",
+    "rollup": "^2.78.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^28.0.8",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
   }
 }
